@@ -1,0 +1,34 @@
+.emp-type-list-heading {
+  color: #ffffff;
+  font-size: 17px;
+}
+.emp-types-list-container {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.emp-type-item {
+  margin: 10px;
+}
+
+.emp-type-label-name {
+  color: #ffffff;
+  margin: 10px;
+  font-size: 13px;
+}
+.salary-range-list-container {
+  list-style-type: none;
+  padding: 0px;
+}
+.salary-range-label-name {
+  color: #ffffff;
+  margin: 10px;
+  font-size: 13px;
+}
+.salary-list-heading {
+  color: #ffffff;
+  font-size: 17px;
+}
+.salary-range-list-item {
+  margin: 10px;
+}
