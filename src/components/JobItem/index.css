@@ -1,6 +1,9 @@
 * {
   font-family: 'Roboto';
 }
+.section-divider {
+  color: #cbd5e1;
+}
 .job-item-container {
   background-color: #202020;
   border-radius: 10px;
@@ -99,4 +102,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   text-align: start;
+}
+.link-item {
+  text-decoration: none;
+  outline: none;
 }
