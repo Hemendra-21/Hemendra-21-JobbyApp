@@ -1,9 +1,12 @@
-.job-details-item-container {
+.job-item-details-container {
   background-color: #000000;
   min-height: 100vh;
   display: flex;
-  padding: 50px;
   flex-direction: column;
+}
+
+.job-details-item-container {
+  padding: 50px;
 }
 
 .job-details-container {
@@ -42,7 +45,7 @@
 .job-detail-description-heading {
   font-size: 20px;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
 }
 .job-detail-description {
   color: #f1f5f9;
@@ -112,4 +115,18 @@
   display: flex;
   justify-content: space-between;
   padding: 0px;
+}
+
+.job-item-details-failure-view-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.job-item-details-loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

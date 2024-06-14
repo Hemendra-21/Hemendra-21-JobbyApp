@@ -18,14 +18,14 @@ const JobItem = props => {
   } = jobDetails
 
   return (
-    <li>
+    <li className="job-item">
       <Link to={`/jobs/${id}`} className="link-item">
         <div className="job-item-container">
           <div className="logo-title-ratings-container">
             <img
               src={companyLogoUrl}
               className="company-logo"
-              alt="company-logo"
+              alt="company logo"
             />
             <div className="title-rating-container">
               <h1 className="title">{title}</h1>
@@ -50,7 +50,7 @@ const JobItem = props => {
           </div>
           <hr className="section-divider" />
           <div className="description-container">
-            <p className="description-heading">Description</p>
+            <h1 className="description-heading">Description</h1>
             <p className="description">{jobDescription}</p>
           </div>
         </div>

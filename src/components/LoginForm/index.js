@@ -102,7 +102,7 @@ class LoginForm extends Component {
           >
             <img
               src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-              alt="website-logo"
+              alt="website logo"
               className="website-logo"
             />
             <div className="input-field-container">

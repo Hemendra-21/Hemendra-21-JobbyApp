@@ -24,7 +24,7 @@ const Home = () => {
             <br /> abilities and potential.
           </p>
           <Link to="/jobs">
-            <button type="button" className="home-logout-btn">
+            <button type="button" className="find-jobs-btn">
               Find Jobs
             </button>
           </Link>

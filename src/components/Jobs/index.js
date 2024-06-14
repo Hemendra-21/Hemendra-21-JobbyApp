@@ -9,7 +9,6 @@ import Profile from '../Profile/index'
 import FiltersGroup from '../FiltersGroup/index'
 import './index.css'
 import JobItem from '../JobItem/index'
-import NotFound from '../NotFound/index'
 
 const apiConstants = {
   initial: 'INITIAL',
@@ -64,6 +63,8 @@ class Jobs extends Component {
         jobsToDisplay: updatedData,
         apiStatus: apiConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiConstants.failure})
     }
   }
 
@@ -84,10 +85,6 @@ class Jobs extends Component {
     this.setState({activeSalaryRange: salaryRangeId}, this.getJobs)
   }
 
-  onChangeSearchInput = event => {
-    this.setState({inputSearch: event.target.value}, this.getJobs)
-  }
-
   renderLoadingView = () => (
     <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
@@ -98,7 +95,7 @@ class Jobs extends Component {
     <div className="no-jobs-view-container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
-        alt="not jobs"
+        alt="no jobs"
         className="no-jobs-view"
       />
       <h1 className="no-jobs-heading">No Jobs Found</h1>
@@ -113,7 +110,7 @@ class Jobs extends Component {
     return (
       <>
         {jobsToDisplay.length > 0 ? (
-          <ul>
+          <ul className="jobs-items-container">
             {jobsToDisplay.map(eachItem => (
               <JobItem jobDetails={eachItem} key={eachItem.id} />
             ))}
@@ -124,6 +121,23 @@ class Jobs extends Component {
       </>
     )
   }
+
+  renderFailureView = () => (
+    <div className="failure-view-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        alt="failure view"
+        className="failure-image"
+      />
+      <h1 className="failure-view-heading">Oops! Something Went Wrong</h1>
+      <p className="failure-view-description">
+        We cannot seem to find the page you are looking for.
+      </p>
+      <button type="button" className="retry-btn" onClick={this.getJobs}>
+        Retry
+      </button>
+    </div>
+  )
 
   renderJobsOnApiStatus = () => {
     const {apiStatus} = this.state
@@ -141,7 +155,7 @@ class Jobs extends Component {
   }
 
   render() {
-    const {inputSearch} = this.state
+    const {inputSearch, activeSalaryRange} = this.state
     return (
       <div className="jobs-section-container">
         <Header />
@@ -152,6 +166,7 @@ class Jobs extends Component {
             <FiltersGroup
               updateEmploymentTypes={this.updateEmploymentTypes}
               updateSalaryRange={this.updateSalaryRange}
+              activeSalaryRange={activeSalaryRange}
             />
           </div>
 
@@ -161,17 +176,21 @@ class Jobs extends Component {
                 type="search"
                 placeholder="Search"
                 className="search-input"
-                onChange={this.onChangeSearchInput}
+                onChange={event =>
+                  this.setState({inputSearch: event.target.value})
+                }
                 value={inputSearch}
               />
               <button
                 type="button"
                 data-testid="searchButton"
                 className="search-btn"
+                onClick={() => this.getJobs()}
               >
                 <BsSearch className="search-icon" />
               </button>
             </div>
+
             <div className="jobs-list-container">
               {this.renderJobsOnApiStatus()}
             </div>

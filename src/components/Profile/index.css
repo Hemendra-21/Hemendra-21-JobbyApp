@@ -1,4 +1,10 @@
 .profile-container {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-view-container {
   background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
   background-size: cover;
   height: fit-content;

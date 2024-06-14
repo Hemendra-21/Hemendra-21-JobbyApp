@@ -51,21 +51,17 @@ const FiltersGroup = props => {
               updateEmploymentTypes(eachItem.employmentTypeId)
             }
             return (
-              <div>
-                <li className="emp-type-item" key={eachItem.employmentTypeId}>
-                  <input
-                    type="checkbox"
-                    id={eachItem.label}
-                    onChange={onClickEmploymentItem}
-                  />
-                  <label
-                    htmlFor={eachItem.label}
-                    className="emp-type-label-name"
-                  >
-                    {eachItem.label}
-                  </label>
-                </li>
-              </div>
+              <li className="emp-type-item" key={eachItem.employmentTypeId}>
+                <input
+                  type="checkbox"
+                  id={eachItem.label}
+                  onChange={onClickEmploymentItem}
+                  className="emp-type-item-input"
+                />
+                <label htmlFor={eachItem.label} className="emp-type-label-name">
+                  {eachItem.label}
+                </label>
+              </li>
             )
           })}
         </ul>
@@ -74,7 +70,7 @@ const FiltersGroup = props => {
   }
 
   const renderSalaryRanges = () => {
-    const {updateSalaryRange} = props
+    const {updateSalaryRange, activeSalaryRange} = props
     return (
       <div>
         <h1 className="salary-list-heading">Salary Range</h1>
@@ -83,6 +79,8 @@ const FiltersGroup = props => {
             const onClickSalaryRange = () => {
               updateSalaryRange(eachItem.salaryRangeId)
             }
+
+            const isChecked = eachItem.salaryRangeId === activeSalaryRange
             return (
               <li
                 key={eachItem.salaryRangeId}
@@ -93,6 +91,8 @@ const FiltersGroup = props => {
                   name="salary-range"
                   id={eachItem.label}
                   onClick={onClickSalaryRange}
+                  className="salary-range-input"
+                  checked={isChecked}
                 />
                 <label
                   htmlFor={eachItem.label}

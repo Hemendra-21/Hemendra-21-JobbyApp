@@ -4,21 +4,27 @@
 }
 .emp-types-list-container {
   list-style-type: none;
-  padding: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 
 .emp-type-item {
   margin: 10px;
+  margin-left: 0px;
+  cursor: pointer;
+  list-style-type: none;
 }
 
 .emp-type-label-name {
   color: #ffffff;
   margin: 10px;
   font-size: 13px;
+  cursor: pointer;
 }
 .salary-range-list-container {
   list-style-type: none;
   padding: 0px;
+  margin-left: 0px;
 }
 .salary-range-label-name {
   color: #ffffff;
@@ -31,4 +37,15 @@
 }
 .salary-range-list-item {
   margin: 10px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+.emp-type-item-input {
+  cursor: pointer;
+}
+.salary-range-input {
+  cursor: pointer;
+}
+.salary-range-label-name {
+  cursor: pointer;
 }

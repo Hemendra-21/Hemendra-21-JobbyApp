@@ -22,8 +22,8 @@
 
 .home-nav-sections-container {
   display: flex;
-  width: 200px;
-  justify-content: space-evenly;
+  width: 170px;
+  justify-content: space-between;
 }
 
 .section-name {
@@ -31,20 +31,46 @@
   list-style-type: none;
   font-family: 'Roboto';
 }
-
-.logout-button {
-  background-color: #4f46e5;
-  width: 120px;
-  height: 30px;
-  border: none;
-  font-size: 12px;
-  color: #ffffff;
-  font-family: 'Roboto';
-  border-radius: 5px;
-  padding: 5px;
-  margin-top: 10px;
+@media screen and (min-width: 768px) {
+  .logout-button-large-media {
+    background-color: #4f46e5;
+    width: 120px;
+    height: 30px;
+    border: none;
+    font-size: 12px;
+    color: #ffffff;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .logout-button-small-media {
+    display: none;
+  }
 }
 
 .nav-link {
   text-decoration: none;
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+
+@media screen and (max-width: 768px) {
+  .logout-button-small-media {
+    background-color: #4f46e5;
+    width: 120px;
+    height: 30px;
+    border: none;
+    font-size: 12px;
+    color: #ffffff;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .logout-button-large-media {
+    display: none;
+  }
 }

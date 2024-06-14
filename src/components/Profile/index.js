@@ -56,7 +56,7 @@ class Profile extends Component {
     const {name, profileImageUrl, shortBio} = profileDetails
 
     return (
-      <div className="profile-container">
+      <div className="profile-view-container">
         <img src={profileImageUrl} alt="profile" className="profile-icon" />
         <h1 className="profile-name">{name}</h1>
         <p className="profile-bio">{shortBio}</p>
@@ -76,7 +76,7 @@ class Profile extends Component {
     </div>
   )
 
-  render() {
+  renderProfile = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
@@ -89,6 +89,10 @@ class Profile extends Component {
       default:
         return null
     }
+  }
+
+  render() {
+    return <div className="profile-container">{this.renderProfile()}</div>
   }
 }
 
