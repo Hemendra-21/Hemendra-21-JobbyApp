@@ -23,7 +23,7 @@ const SimilarJobs = props => {
           className="similar-company-logo"
           alt="similar job company logo"
         />
-        <div className="title-rating-container">
+        <div className="similar-job-title-rating-container">
           <h1 className="similar-job-title">{title}</h1>
           <div className="similar-job-rating-container">
             <FaStar className="rating-star" />

@@ -97,13 +97,13 @@ class LoginForm extends Component {
       <div className="Login-page-container">
         <div className="login-form-container">
           <form
-            className="app-logo-name-container"
+            className="loginForm-logo-name-container"
             onSubmit={this.onFormSubmit}
           >
             <img
               src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
               alt="website logo"
-              className="website-logo"
+              className="loginForm-logo"
             />
             <div className="input-field-container">
               {this.renderUsernameField()}
@@ -111,7 +111,7 @@ class LoginForm extends Component {
             <div className="input-field-container">
               {this.renderPasswordField()}
             </div>
-            <button type="submit" className="login-button">
+            <button type="submit" className="loginForm-loginBtn">
               Login
             </button>
             {showFailureMsg && <p className="err-msg">*{errorMsg}</p>}

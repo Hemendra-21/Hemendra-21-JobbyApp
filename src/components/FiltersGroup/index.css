@@ -49,3 +49,35 @@
 .salary-range-label-name {
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .filters-divider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .emp-type-list-heading {
+    font-size: 13px;
+  }
+  .emp-type-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+  }
+  .emp-type-label-name {
+    font-size: 11px;
+    margin: 5px;
+  }
+  .salary-list-heading {
+    font-size: 13px;
+  }
+  .salary-range-label-name {
+    font-size: 11px;
+    margin: 0px;
+  }
+  .salary-range-list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

@@ -19,7 +19,7 @@
   padding-left: 20px;
 }
 
-.search-container {
+.search-container-lg {
   display: flex;
   background-color: #000000;
   width: 400px;
@@ -28,6 +28,11 @@
   padding-left: 10px;
   border: 1px solid #7e858e;
   border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .search-container-sm {
+    display: none;
+  }
 }
 .search-input {
   background-color: transparent;
@@ -108,4 +113,63 @@
   padding: 5px;
   margin-top: 10px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .search-container-sm {
+    display: flex;
+    background-color: #000000;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    padding-left: 10px;
+    border: 1px solid #7e858e;
+    border-radius: 5px;
+  }
+  .search-container-lg {
+    display: none;
+  }
+
+  .search-container {
+    order: 0;
+  }
+  .inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 100%;
+  }
+  .profile-filters-container {
+    width: 100%;
+  }
+  .profile-filters-divider {
+    width: 100%;
+  }
+  .onSearch-jobs-list-container {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .no-jobs-view-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .no-jobs-view {
+    width: 100%;
+    height: 180px;
+  }
+  .no-jobs-heading {
+    font-size: 20px;
+    margin: 0;
+  }
+  .no-jobs-description {
+    font-size: 13px;
+    margin: 0;
+  }
 }

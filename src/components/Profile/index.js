@@ -53,12 +53,12 @@ class Profile extends Component {
 
   renderProfileView = () => {
     const {profileDetails} = this.state
-    const {name, profileImageUrl, shortBio} = profileDetails
+    const {profileImageUrl, shortBio} = profileDetails
 
     return (
       <div className="profile-view-container">
         <img src={profileImageUrl} alt="profile" className="profile-icon" />
-        <h1 className="profile-name">{name}</h1>
+        <h1 className="profile-name">Hemendra Chandaluri</h1>
         <p className="profile-bio">{shortBio}</p>
       </div>
     )

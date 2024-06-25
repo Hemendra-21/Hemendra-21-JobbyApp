@@ -8,23 +8,25 @@
 
 .login-form-container {
   background-color: #272727;
-  padding: 50px;
+  padding: 30px;
   border-radius: 10px;
+  height: fit-content;
 }
-.app-logo-name-container {
+.loginForm-logo-name-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.website-logo {
+.loginForm-logo {
   height: 40px;
   margin-bottom: 20px;
 }
 
 .input-field-container {
   margin-bottom: 10px;
+  padding: 0px;
 }
 
 .input-label {
@@ -46,7 +48,7 @@
   margin-top: 5px;
 }
 
-.login-button {
+.loginForm-loginBtn {
   background-color: #4f46e5;
   width: 100%;
   border: none;
@@ -56,6 +58,7 @@
   border-radius: 5px;
   padding: 5px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .err-msg {
@@ -63,4 +66,29 @@
   font-family: 'Roboto';
   font-size: 12px;
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .login-form-container {
+    width: 85%;
+  }
+  .loginForm-logo {
+    height: 30px;
+  }
+  .input-label {
+    font-size: 10px;
+  }
+  .input-field {
+    font-size: 10px;
+    padding-left: 10px;
+    height: 25px;
+  }
+  .loginForm-loginBtn {
+    font-size: 10px;
+    height: 25px;
+    font-weight: 500;
+  }
+  .err-msg {
+    font-size: 10px;
+  }
 }

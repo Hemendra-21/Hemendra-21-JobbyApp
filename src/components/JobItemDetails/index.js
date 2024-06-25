@@ -115,7 +115,7 @@ class JobItemDetails extends Component {
           <div className="company-logo-title-rating-container">
             <img
               src={companyLogoUrl}
-              className="company-logo"
+              className="job-item-details-company-logo"
               alt="job details company logo"
             />
             <div className="title-rating-container">
@@ -168,7 +168,11 @@ class JobItemDetails extends Component {
             <h1 className="company-life-heading">Life at Company</h1>
             <div className="company-life-desc-image-container">
               <p className="company-life-description">{description}</p>
-              <img src={imageUrl} alt="life at company" />
+              <img
+                src={imageUrl}
+                alt="life at company"
+                className="company-life-image"
+              />
             </div>
           </div>
         </div>

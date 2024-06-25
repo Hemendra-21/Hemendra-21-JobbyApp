@@ -160,9 +160,28 @@ class Jobs extends Component {
       <div className="jobs-section-container">
         <Header />
         <div className="inner-container">
+          <div className="search-container-sm">
+            <input
+              type="search"
+              placeholder="Search"
+              className="search-input"
+              onChange={event =>
+                this.setState({inputSearch: event.target.value})
+              }
+              value={inputSearch}
+            />
+            <button
+              type="button"
+              data-testid="searchButton"
+              className="search-btn"
+              onClick={() => this.getJobs()}
+            >
+              <BsSearch className="search-icon" />
+            </button>
+          </div>
           <div className="profile-filters-container">
             <Profile />
-            <hr />
+            <hr className="profile-filters-divider" />
             <FiltersGroup
               updateEmploymentTypes={this.updateEmploymentTypes}
               updateSalaryRange={this.updateSalaryRange}
@@ -171,7 +190,7 @@ class Jobs extends Component {
           </div>
 
           <div className="onSearch-jobs-list-container">
-            <div className="search-container">
+            <div className="search-container-lg">
               <input
                 type="search"
                 placeholder="Search"

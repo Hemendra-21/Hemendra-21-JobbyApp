@@ -12,12 +12,12 @@ const Home = () => {
     <>
       <Header />
       <div className="home-page-container">
-        <div className="home-content">
-          <h1 className="home-heading">
+        <div className="homePage-content">
+          <h1 className="homePage-heading">
             Find The Job That <br />
             Fits Your Life
           </h1>
-          <p className="home-description">
+          <p className="homePage-description">
             Millions of people are searching for jobs,salary
             <br />
             information,company reviews.Find the job that fits your

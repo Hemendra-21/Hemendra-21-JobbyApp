@@ -20,7 +20,7 @@
   align-items: center;
 }
 .title-rating-container {
-  height: 50px;
+  height: fit-content;
 }
 .company-logo {
   height: 60px;
@@ -110,4 +110,66 @@
 .link-item {
   text-decoration: none;
   outline: none;
+}
+
+@media screen and (max-width: 767px) {
+  .job-item {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .job-item-container {
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .company-logo {
+    height: 40px;
+    padding-right: 10px;
+  }
+  .rating {
+    font-size: 12px;
+  }
+
+  .logo-title-ratings-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+  }
+  .title-rating-container {
+    padding: 0px;
+  }
+  .location {
+    font-size: 10px;
+  }
+  .location-logo {
+    height: 20px;
+  }
+  .brief-case-logo {
+    height: 20px;
+  }
+  .employment-type {
+    font-size: 10px;
+  }
+  .location-empType-package-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .location-empType-container {
+    margin: 0px;
+  }
+  .package {
+    font-size: 12px;
+    margin: 0px;
+  }
+  .description-heading {
+    font-size: 13px;
+  }
+  .description {
+    font-size: 10px;
+  }
 }

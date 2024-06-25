@@ -111,7 +111,7 @@ const FiltersGroup = props => {
   return (
     <div>
       {renderEmploymentTypes()}
-      <hr />
+      <hr className="filters-divider" />
       {renderSalaryRanges()}
     </div>
   )

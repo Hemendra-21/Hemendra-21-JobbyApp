@@ -1,10 +1,12 @@
 import {Link, withRouter} from 'react-router-dom'
-import {FiLogOut} from 'react-icons/fi'
 import Cookies from 'js-cookie'
+import {AiFillHome} from 'react-icons/ai'
+import {FiLogOut} from 'react-icons/fi'
+import {BsBriefcaseFill} from 'react-icons/bs'
 import './index.css'
 
 const Header = props => {
-  const onClickLogout = () => {
+  const onClickHeaderLogout = () => {
     Cookies.remove('jwt_token')
     const {history} = props
     history.replace('/login')
@@ -17,39 +19,51 @@ const Header = props => {
           <img
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
             alt="website logo"
-            className="home-nav-logo"
+            className="header-logo"
           />
         </Link>
 
-        <ul className="home-nav-sections-container">
-          <li className="section-name">
-            <Link to="/" className="nav-link">
+        <ul className="header-sections-container-lg">
+          <li className="header-section-name-lg">
+            <Link to="/" className="header-section-nav-link">
               Home
             </Link>
           </li>
-          <li className="section-name">
-            <Link to="/jobs" className="nav-link">
+
+          <li className="header-section-name-lg">
+            <Link to="/jobs" className="header-section-nav-link">
               Jobs
             </Link>
           </li>
-          <li className="logout-button-small-media">
-            <button
-              type="button"
-              data-testid="logoutButton"
-              onClick={onClickLogout}
-            >
-              .<FiLogOut />
-            </button>
-          </li>
         </ul>
-
         <button
           type="button"
-          className="logout-button-large-media"
-          onClick={onClickLogout}
+          className="header-logoutBtn"
+          onClick={onClickHeaderLogout}
         >
           Logout
         </button>
+
+        <ul className="header-sections-container-sm">
+          <li className="header-section-logo-sm">
+            <Link to="/" className="header-section-nav-link">
+              <AiFillHome />
+            </Link>
+          </li>
+
+          <li className="header-section-logo-sm">
+            <Link to="/jobs" className="header-section-nav-link">
+              <BsBriefcaseFill />
+            </Link>
+          </li>
+
+          <li
+            className="header-section-logoutBtn-sm"
+            onClick={onClickHeaderLogout}
+          >
+            <FiLogOut />
+          </li>
+        </ul>
       </div>
     </nav>
   )

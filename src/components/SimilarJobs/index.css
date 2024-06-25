@@ -40,3 +40,32 @@
   line-height: 1.6;
   text-align: left;
 }
+
+@media screen and (max-width: 767px) {
+  .similar-job-item-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .similar-company-logo {
+    height: 50px;
+  }
+  .similar-job-title {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .similar-job-rating {
+    font-size: 14px;
+  }
+  .similar-company-logo-title-rating-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .similar-jobs-description-heading {
+    font-size: 15px;
+  }
+  .similar-jobs-description {
+    font-size: 12px;
+  }
+}

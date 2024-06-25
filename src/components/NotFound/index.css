@@ -21,3 +21,22 @@
 .not-found-image {
   height: 300px;
 }
+
+@media screen and (max-width: 767px) {
+  .not-found-container {
+    padding: 20px;
+  }
+  .not-found-image {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 15px;
+  }
+  .not-found-view-heading {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .not-found-view-description {
+    font-size: 12px;
+    text-align: center;
+  }
+}

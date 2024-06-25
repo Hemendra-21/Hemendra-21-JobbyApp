@@ -22,8 +22,9 @@
   justify-content: flex-start;
   align-items: center;
 }
-.company-logo {
+.job-item-details-company-logo {
   height: 70px;
+  margin-right: 20px;
 }
 .job-title {
   font-size: 25px;
@@ -129,4 +130,109 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .job-details-item-container {
+    padding: 20px;
+  }
+  .job-item-details-company-logo {
+    height: 50px;
+  }
+  .job-title {
+    font-size: 15px;
+  }
+  .company-logo-title-rating-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .title-rating-container {
+    height: 40px;
+  }
+  .job-details-container {
+    padding: 15px;
+  }
+  .job-detail-description-heading {
+    font-size: 14px;
+  }
+  .anchor {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    width: 45px;
+    align-items: center;
+  }
+  .job-detail-description {
+    font-size: 12px;
+  }
+  .skills-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px;
+  }
+  .skill-item {
+    width: 80px;
+    margin-bottom: 25px;
+  }
+  .skills-heading {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .skill-logo {
+    height: 30px;
+  }
+  .skill-name {
+    font-size: 12px;
+  }
+  .company-life-heading {
+    font-size: 14px;
+  }
+  .company-life-desc-image-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .company-life-description {
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .similar-jobs-heading {
+    font-size: 20px;
+  }
+  .similar-jobs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .company-life-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .job-item-details-failure-view-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .failure-image {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 5px;
+  }
+  .failure-view-heading {
+    font-size: 18px;
+  }
+  .failure-view-description {
+    font-size: 13px;
+  }
+  .retry-btn {
+    width: 70px;
+    font-size: 12px;
+    height: 30px;
+  }
 }
